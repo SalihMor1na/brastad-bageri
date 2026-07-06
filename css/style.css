@@ -299,12 +299,14 @@ a { color: var(--brown); }
   inset: 0;
   z-index: 90;
   background: var(--cream);
-  display: flex;
+  display: none; /* döljs helt tills JS tar bort [hidden] — annars täcker
+                    detta lager hela sidan och slukar klick (även på desktop) */
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 300ms var(--ease-out);
 }
+.mobile-nav:not([hidden]) { display: flex; }
 .mobile-nav.is-open { opacity: 1; }
 .mobile-nav nav {
   display: flex;
