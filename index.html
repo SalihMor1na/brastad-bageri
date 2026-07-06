@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brastad Bageri – Stenugnsbakat surdegsbröd i Brastad, Bohuslän</title>
+  <meta name="description" content="Brastad Bageri bakar surdegsbröd, kanelbullar och bakverk i stenugn – med lokala råvaror och gott om tid. Besök oss på Bagarvägen 8 i Brastad.">
+  <meta property="og:title" content="Brastad Bageri – Stenugnsbakat i Bohuslän">
+  <meta property="og:description" content="Surdegsbröd, kanelbullar och bakverk bakade med tid och omsorg. Bagarvägen 8, Brastad.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&q=75&fm=jpg&fit=crop">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2392400E'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='17' fill='%23FAF4E8'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Brastad Bageri",
+    "telephone": "+46 523 400 22",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bagarvägen 8",
+      "postalCode": "454 31",
+      "addressLocality": "Brastad",
+      "addressCountry": "SE"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "13:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#huvudinnehall">Hoppa till innehållet</a>
+
+  <header class="site-header" id="sidhuvud">
+    <div class="header-inner">
+      <a href="#topp" class="brand" aria-label="Brastad Bageri – till startsidan">
+        <svg class="brand-mark" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+          <path d="M12 2c1.8 1.6 3 3.4 3 5.2S13.8 10.5 12 12c-1.8-1.5-3-3-3-4.8S10.2 3.6 12 2Z"/>
+          <path d="M12 9.5c1.8 1.6 3 3.4 3 5.2s-1.2 3.3-3 4.8c-1.8-1.5-3-3-3-4.8s1.2-3.6 3-5.2Z"/>
+          <path d="M12 17c1.8 1.6 3 3.4 3 5.2s-1.2 3.3-3 4.8c-1.8-1.5-3-3-3-4.8S10.2 18.6 12 17Z"/>
+          <path d="M12 24.5V31" stroke-width="1.6" fill="none"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Brastad Bageri</span>
+          <span class="brand-sub">Bohuslän · est. 1987</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Huvudmeny">
+        <a href="#sortiment">Sortiment</a>
+        <a href="#om-oss">Om oss</a>
+        <a href="#hitta-hit">Hitta hit</a>
+      </nav>
+      <a class="btn btn-header" href="tel:+4652340022">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        0523-400 22
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobilmeny" aria-label="Öppna menyn">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobilmeny" hidden>
+    <nav aria-label="Mobilmeny">
+      <a href="#sortiment">Sortiment</a>
+      <a href="#om-oss">Om oss</a>
+      <a href="#hitta-hit">Hitta hit</a>
+      <a href="tel:+4652340022" class="mobile-nav-tel">Ring oss – 0523-400 22</a>
+    </nav>
+  </div>
+
+  <main id="huvudinnehall">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="topp">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1800&q=72&fm=jpg&fit=crop" alt="" width="1800" height="1200" fetchpriority="high" decoding="async">
+        <div class="hero-scrim"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-kicker reveal-line"><span>Surdegsbageri · Brastad, Bohuslän</span></p>
+        <h1 class="hero-title">
+          <span class="reveal-line"><span>Bakat med tid,</span></span>
+          <span class="reveal-line"><span>stenugn <em>&amp;</em> omsorg.</span></span>
+        </h1>
+        <p class="hero-lead reveal-line"><span>Varje morgon sedan 1987 tänder vi stenugnen i gryningen och bakar bröd på vår egen surdeg, lokalt mjöl och gott om tålamod.</span></p>
+        <div class="hero-actions reveal-line">
+          <span class="hero-actions-inner">
+            <a class="btn btn-primary" href="#sortiment">Se sortimentet</a>
+            <a class="btn btn-ghost" href="#hitta-hit">Hitta hit</a>
+          </span>
+        </div>
+        <p class="open-chip reveal-line"><span><span class="open-dot" data-open-dot aria-hidden="true"></span> <span data-open-status>Öppettider</span></span></p>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Skrolla</span>
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14m0 0-6-6m6 6 6-6" fill="none" stroke-width="1.5"/></svg>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Surdeg</span><i>✳</i><span>Kanelbullar</span><i>✳</i><span>Stenugnsbakat</span><i>✳</i><span>Lokala råvaror</span><i>✳</i><span>Nybakat varje morgon</span><i>✳</i>
+        <span>Surdeg</span><i>✳</i><span>Kanelbullar</span><i>✳</i><span>Stenugnsbakat</span><i>✳</i><span>Lokala råvaror</span><i>✳</i><span>Nybakat varje morgon</span><i>✳</i>
+      </div>
+    </div>
+
+    <!-- ============ VÄRDEN ============ -->
+    <section class="values">
+      <div class="container">
+        <p class="statement" data-reveal>Bra bröd går inte att skynda fram. Vår surdeg får jäsa i två dygn — <em>resten sköter stenugnen.</em></p>
+        <ul class="value-grid">
+          <li data-reveal style="--d:0ms">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2c1.5 1.3 2.5 2.8 2.5 4.3S13.5 9 12 10.2C10.5 9 9.5 7.8 9.5 6.3S10.5 3.3 12 2Zm0 6.5c1.5 1.3 2.5 2.8 2.5 4.3s-1 2.7-2.5 3.9c-1.5-1.2-2.5-2.4-2.5-3.9s1-3 2.5-4.3Zm0 6.5c1.5 1.3 2.5 2.8 2.5 4.3S13.5 22 12 23.2c-1.5-1.2-2.5-2.4-2.5-3.9s1-3 2.5-4.3Z" fill="none" stroke-width="1.5"/></svg>
+            <h3>Egen surdegskultur</h3>
+            <p>Vår grund sedan starten — samma kultur, matad varje dag i över trettio år.</p>
+          </li>
+          <li data-reveal style="--d:90ms">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22c4 0 7-2.8 7-6.5 0-2.6-1.6-4.4-3-6-1.2-1.4-2.3-2.8-2.6-5-.1-.8-1-1-1.5-.4C10 6.4 10.5 8.7 9 10.5 8 9.9 7.6 9 7.5 7.9c-.1-.8-1.1-1-1.5-.3C5.1 9.2 5 10.8 5 12.6 5 19.2 8 22 12 22Z" fill="none" stroke-width="1.5"/></svg>
+            <h3>Stenugnsbakat</h3>
+            <p>Ugnens strålande värme ger den tjocka, knapriga skorpan och det saftiga innanmätet.</p>
+          </li>
+          <li data-reveal style="--d:180ms">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v2M4.9 6.6 6.3 8m12.8-1.4L17.7 8M3 17h18M5 17a7 7 0 0 1 14 0M2 21h20" fill="none" stroke-width="1.5"/></svg>
+            <h3>Bakat i gryningen</h3>
+            <p>Klockan halv fem tänds ugnen. När vi öppnar är hyllorna fyllda och brödet fortfarande varmt.</p>
+          </li>
+          <li data-reveal style="--d:270ms">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21C7 16.6 3 13.3 3 9.3 3 6.4 5.2 4 8 4c1.6 0 3.1.8 4 2 0.9-1.2 2.4-2 4-2 2.8 0 5 2.4 5 5.3 0 4-4 7.3-9 11.7Z" fill="none" stroke-width="1.5"/></svg>
+            <h3>Lokala råvaror</h3>
+            <p>Mjöl från bohuslänska kvarnar, ägg och mejeri från gårdar i närheten.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SORTIMENT ============ -->
+    <section class="assortment" id="sortiment">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker">Ur ugnen i dag</p>
+          <h2>Vårt sortiment</h2>
+          <p class="section-lead">Allt bakas från grunden i vårt eget bageri — det som tar slut bakas inte om förrän nästa morgon.</p>
+        </header>
+        <div class="card-grid">
+          <article class="card" data-reveal style="--d:0ms">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1534620808146-d33bb39128b2?w=800&q=70&fm=jpg&fit=crop" alt="Skivat surdegsbröd av råg" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="card-tag">Bröd</p>
+              <h3>Surdegsbröd</h3>
+              <p>Levain, rågkraft och vårt bohusbröd med havssalt. Bakas på 48 timmars jäsning.</p>
+              <p class="card-price">från 45 kr</p>
+            </div>
+          </article>
+          <article class="card" data-reveal style="--d:90ms">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=800&q=70&fm=jpg&fit=crop" alt="Nybakade kanelbullar med pärlsocker" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="card-tag">Fika</p>
+              <h3>Kanelbullar</h3>
+              <p>Handrullade med äkta kanel, kardemumma och pärlsocker. Ur ugnen flera gånger om dagen.</p>
+              <p class="card-price">från 28 kr</p>
+            </div>
+          </article>
+          <article class="card" data-reveal style="--d:180ms">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=70&fm=jpg&fit=crop" alt="Nygräddad croissant pudrad med socker" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="card-tag">Frukost</p>
+              <h3>Croissanter &amp; frukost</h3>
+              <p>Frasiga croissanter på smördeg vikt för hand — trettiotvå lager smör och tålamod.</p>
+              <p class="card-price">från 32 kr</p>
+            </div>
+          </article>
+          <article class="card" data-reveal style="--d:0ms">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=70&fm=jpg&fit=crop" alt="Chokladtårta med spritsad frosting" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="card-tag">Beställning</p>
+              <h3>Tårtor</h3>
+              <p>Gräddtårtor, chokladtårtor och prinsess — till kalas, dop och bröllop. Ring och beställ.</p>
+              <p class="card-price">från 340 kr</p>
+            </div>
+          </article>
+          <article class="card" data-reveal style="--d:90ms">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?w=800&q=70&fm=jpg&fit=crop" alt="Äppelpaj med rutmönstrat lock på galler" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="card-tag">Sött</p>
+              <h3>Pajer &amp; kakor</h3>
+              <p>Äppelpaj med bohuslänska äpplen, sju sorters kakor och vår berömda mazarin.</p>
+              <p class="card-price">från 25 kr</p>
+            </div>
+          </article>
+          <article class="card" data-reveal style="--d:180ms">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=70&fm=jpg&fit=crop" alt="Kaffekopp med latte art" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="card-tag">Kafé</p>
+              <h3>Kaffe &amp; fika</h3>
+              <p>Nybryggt kaffe från västsvenskt rosteri. Slå dig ner en stund — eller ta med.</p>
+              <p class="card-price">från 30 kr</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANNER ============ -->
+    <section class="banner">
+      <img class="banner-img" src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=1800&q=70&fm=jpg&fit=crop" alt="Bageridisk fylld med nybakade bakverk" width="1800" height="900" loading="lazy" decoding="async">
+      <div class="banner-overlay">
+        <blockquote data-reveal>
+          <p>”Doften när man kliver in klockan åtta en lördagsmorgon — det är den man kör till Brastad för.”</p>
+          <cite>— Stamkund sedan 1994</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ OM OSS ============ -->
+    <section class="about" id="om-oss">
+      <div class="container about-grid">
+        <div class="about-media" data-reveal>
+          <img class="about-img-main" src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=900&q=70&fm=jpg&fit=crop" alt="Bagarens händer knådar en surdeg" width="900" height="600" loading="lazy" decoding="async">
+          <img class="about-img-small" src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=600&q=70&fm=jpg&fit=crop" alt="Butiken med hyllor fulla av nybakat bröd" width="600" height="450" loading="lazy" decoding="async">
+        </div>
+        <div class="about-text">
+          <p class="kicker" data-reveal>Om oss</p>
+          <h2 data-reveal>Ett hantverk i tredje generationen</h2>
+          <div data-reveal>
+            <p>Brastad Bageri har legat på samma hörn sedan 1987, men recepten är äldre än så. Här bakar vi som farfar lärde oss: långsamt, för hand och alltid på riktiga råvaror.</p>
+            <p>Surdegen som bär våra bröd är densamma som vid starten — den matas varje dag, året om. Mjölet mals på kvarnar här i Bohuslän, och det som säljs över disk på förmiddagen sattes på jäsning redan dagen innan.</p>
+            <p>Välkommen in på en bulle. Vi lovar att du känner doften redan på parkeringen.</p>
+          </div>
+          <ul class="about-stats" data-reveal>
+            <li><strong>04:30</strong><span>tänds ugnen varje morgon</span></li>
+            <li><strong>48 tim</strong><span>får surdegen jäsa</span></li>
+            <li><strong>3:e</strong><span>generationen bagare</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HITTA HIT ============ -->
+    <section class="visit" id="hitta-hit">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker">Välkommen in</p>
+          <h2>Öppettider &amp; hitta hit</h2>
+        </header>
+        <div class="visit-grid">
+          <div class="visit-info" data-reveal>
+            <p class="open-chip open-chip-dark"><span><span class="open-dot" data-open-dot aria-hidden="true"></span> <span data-open-status>Öppettider</span></span></p>
+            <table class="hours" aria-label="Öppettider">
+              <tbody>
+                <tr data-day="1"><th scope="row">Måndag–Fredag</th><td>08:30–18:00</td></tr>
+                <tr data-day="6"><th scope="row">Lördag</th><td>08:00–13:00</td></tr>
+                <tr data-day="0"><th scope="row">Söndag</th><td>Stängt</td></tr>
+              </tbody>
+            </table>
+            <address class="visit-contact">
+              <p>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21c-4.4-4-7-7-7-10.2C5 7 8.1 4 12 4s7 3 7 6.8C19 14 16.4 17 12 21Z" fill="none" stroke-width="1.5"/><circle cx="12" cy="10.5" r="2.2" fill="none" stroke-width="1.5"/></svg>
+                Bagarvägen 8, 454 31 Brastad
+              </p>
+              <p>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" fill="none" stroke-width="1.5"/></svg>
+                <a href="tel:+4652340022">0523-400 22</a>
+              </p>
+            </address>
+            <a class="btn btn-primary" href="https://maps.google.com/?q=Bagarv%C3%A4gen+8,+454+31+Brastad" target="_blank" rel="noopener">Vägbeskrivning</a>
+          </div>
+          <div class="visit-map" data-reveal>
+            <div id="karta" class="map-el" role="application" aria-label="Interaktiv karta över Brastad där Brastad Bageri ligger"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+          <path d="M12 2c1.8 1.6 3 3.4 3 5.2S13.8 10.5 12 12c-1.8-1.5-3-3-3-4.8S10.2 3.6 12 2Z"/>
+          <path d="M12 9.5c1.8 1.6 3 3.4 3 5.2s-1.2 3.3-3 4.8c-1.8-1.5-3-3-3-4.8s1.2-3.6 3-5.2Z"/>
+          <path d="M12 17c1.8 1.6 3 3.4 3 5.2s-1.2 3.3-3 4.8c-1.8-1.5-3-3-3-4.8S10.2 18.6 12 17Z"/>
+          <path d="M12 24.5V31" stroke-width="1.6" fill="none"/>
+        </svg>
+        <p class="footer-name">Brastad Bageri</p>
+        <p class="footer-tagline">Stenugnsbakat i Bohuslän sedan 1987.</p>
+      </div>
+      <div>
+        <h3>Besök oss</h3>
+        <p>Bagarvägen 8<br>454 31 Brastad</p>
+        <p><a href="tel:+4652340022">0523-400 22</a></p>
+      </div>
+      <div>
+        <h3>Öppettider</h3>
+        <p>Mån–fre 08:30–18:00<br>Lördag 08:00–13:00<br>Söndag stängt</p>
+      </div>
+      <div>
+        <h3>Följ oss</h3>
+        <div class="footer-social">
+          <a href="#" aria-label="Brastad Bageri på Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1.1"/></svg>
+          </a>
+          <a href="#" aria-label="Brastad Bageri på Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 8h2.5V4.5H15c-2.5 0-4 1.7-4 4.2V11H8.5v3.5H11v5h3.5v-5h2.6l.6-3.5h-3.2V9c0-.6.4-1 1.5-1Z" fill="none" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> Brastad Bageri. Alla rättigheter förbehållna.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
