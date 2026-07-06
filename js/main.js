@@ -277,13 +277,13 @@
   var mapEl = document.getElementById("karta");
 
   if (mapEl && typeof window.L !== "undefined") {
-    var COORD = [58.38388, 11.48649]; // Bagarvägen, Brastad (geokodad via OSM)
+    var COORD = [58.3835951, 11.4865442]; // Brastad Bageri (exakt POI-nod i OSM)
 
     var map = L.map(mapEl, {
       scrollWheelZoom: false, // hindrar att kartan kapar sidans scroll
       zoomControl: true,
       attributionControl: true
-    }).setView(COORD, 16);
+    }).setView(COORD, 17);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
