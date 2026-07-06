@@ -136,9 +136,30 @@
 
   /* ---------- Scrollavslöjanden ---------- */
 
+  // Dela rubriker med .split-reveal i ord som var för sig stiger upp bakom en mask
+  function splitWords(el) {
+    var text = el.textContent.trim();
+    el.textContent = "";
+    var words = text.split(/\s+/);
+    words.forEach(function (w, i) {
+      var mask = document.createElement("span");
+      mask.className = "word-mask";
+      var inner = document.createElement("span");
+      inner.className = "word";
+      inner.style.setProperty("--i", i);
+      inner.textContent = w;
+      mask.appendChild(inner);
+      el.appendChild(mask);
+      if (i < words.length - 1) el.appendChild(document.createTextNode(" "));
+    });
+  }
+
+  var splitEls = document.querySelectorAll(".split-reveal");
   var revealEls = document.querySelectorAll("[data-reveal]");
 
   if (!reducedMotion && "IntersectionObserver" in window) {
+    splitEls.forEach(splitWords);
+
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -149,8 +170,10 @@
     }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
 
     revealEls.forEach(function (el) { io.observe(el); });
+    splitEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    splitEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
   /* ---------- Diskret parallax i hjälten ---------- */
@@ -169,6 +192,20 @@
         }
         ticking = false;
       });
+    }, { passive: true });
+  }
+
+  /* ---------- Mobil åtgärdsrad: glid in efter hjälten ---------- */
+
+  var mobileBar = document.querySelector(".mobile-bar");
+  if (mobileBar) {
+    var barShown = null;
+    window.addEventListener("scroll", function () {
+      var show = window.scrollY > window.innerHeight * 0.55;
+      if (show !== barShown) {
+        mobileBar.classList.toggle("is-shown", show);
+        barShown = show;
+      }
     }, { passive: true });
   }
 
@@ -240,13 +277,13 @@
   var mapEl = document.getElementById("karta");
 
   if (mapEl && typeof window.L !== "undefined") {
-    var COORD = [58.3797, 11.4936]; // Brastad centrum
+    var COORD = [58.38388, 11.48649]; // Bagarvägen, Brastad (geokodad via OSM)
 
     var map = L.map(mapEl, {
       scrollWheelZoom: false, // hindrar att kartan kapar sidans scroll
       zoomControl: true,
       attributionControl: true
-    }).setView(COORD, 15);
+    }).setView(COORD, 16);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,

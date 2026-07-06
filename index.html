@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://unpkg.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Fraunces:ital,opsz,wght@1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
@@ -148,14 +148,15 @@
     <!-- ============ SORTIMENT ============ -->
     <section class="assortment" id="sortiment">
       <div class="container">
-        <header class="section-head" data-reveal>
-          <p class="kicker">Ur ugnen i dag</p>
-          <h2>Vårt sortiment</h2>
-          <p class="section-lead">Allt bakas från grunden i vårt eget bageri — det som tar slut bakas inte om förrän nästa morgon.</p>
+        <header class="section-head">
+          <span class="section-index" aria-hidden="true">01</span>
+          <p class="kicker" data-reveal>Ur ugnen i dag</p>
+          <h2 class="split-reveal">Vårt sortiment</h2>
+          <p class="section-lead" data-reveal>Allt bakas från grunden i vårt eget bageri — det som tar slut bakas inte om förrän nästa morgon.</p>
         </header>
         <div class="card-grid">
-          <article class="card" data-reveal style="--d:0ms">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1534620808146-d33bb39128b2?w=800&q=70&fm=jpg&fit=crop" alt="Skivat surdegsbröd av råg" width="800" height="1000" loading="lazy" decoding="async"></div>
+          <article class="card" data-reveal>
+            <div class="card-media" data-reveal="mask"><img src="https://images.unsplash.com/photo-1534620808146-d33bb39128b2?w=800&q=70&fm=jpg&fit=crop" alt="Skivat surdegsbröd av råg" width="800" height="1000" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="card-tag">Bröd</p>
               <h3>Surdegsbröd</h3>
@@ -163,8 +164,8 @@
               <p class="card-price">från 45 kr</p>
             </div>
           </article>
-          <article class="card" data-reveal style="--d:90ms">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=800&q=70&fm=jpg&fit=crop" alt="Nybakade kanelbullar med pärlsocker" width="800" height="1000" loading="lazy" decoding="async"></div>
+          <article class="card" data-reveal style="--d:80ms">
+            <div class="card-media" data-reveal="mask"><img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=800&q=70&fm=jpg&fit=crop" alt="Nybakade kanelbullar med pärlsocker" width="800" height="1000" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="card-tag">Fika</p>
               <h3>Kanelbullar</h3>
@@ -172,8 +173,8 @@
               <p class="card-price">från 28 kr</p>
             </div>
           </article>
-          <article class="card" data-reveal style="--d:180ms">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=70&fm=jpg&fit=crop" alt="Nygräddad croissant pudrad med socker" width="800" height="1000" loading="lazy" decoding="async"></div>
+          <article class="card" data-reveal style="--d:160ms">
+            <div class="card-media" data-reveal="mask"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=70&fm=jpg&fit=crop" alt="Nygräddad croissant pudrad med socker" width="800" height="1000" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="card-tag">Frukost</p>
               <h3>Croissanter &amp; frukost</h3>
@@ -181,8 +182,8 @@
               <p class="card-price">från 32 kr</p>
             </div>
           </article>
-          <article class="card" data-reveal style="--d:0ms">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=70&fm=jpg&fit=crop" alt="Chokladtårta med spritsad frosting" width="800" height="1000" loading="lazy" decoding="async"></div>
+          <article class="card" data-reveal>
+            <div class="card-media" data-reveal="mask"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=70&fm=jpg&fit=crop" alt="Chokladtårta med spritsad frosting" width="800" height="1000" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="card-tag">Beställning</p>
               <h3>Tårtor</h3>
@@ -190,8 +191,8 @@
               <p class="card-price">från 340 kr</p>
             </div>
           </article>
-          <article class="card" data-reveal style="--d:90ms">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?w=800&q=70&fm=jpg&fit=crop" alt="Äppelpaj med rutmönstrat lock på galler" width="800" height="1000" loading="lazy" decoding="async"></div>
+          <article class="card" data-reveal style="--d:80ms">
+            <div class="card-media" data-reveal="mask"><img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?w=800&q=70&fm=jpg&fit=crop" alt="Äppelpaj med rutmönstrat lock på galler" width="800" height="1000" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="card-tag">Sött</p>
               <h3>Pajer &amp; kakor</h3>
@@ -199,8 +200,8 @@
               <p class="card-price">från 25 kr</p>
             </div>
           </article>
-          <article class="card" data-reveal style="--d:180ms">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=70&fm=jpg&fit=crop" alt="Kaffekopp med latte art" width="800" height="1000" loading="lazy" decoding="async"></div>
+          <article class="card" data-reveal style="--d:160ms">
+            <div class="card-media" data-reveal="mask"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=70&fm=jpg&fit=crop" alt="Kaffekopp med latte art" width="800" height="1000" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="card-tag">Kafé</p>
               <h3>Kaffe &amp; fika</h3>
@@ -214,7 +215,9 @@
 
     <!-- ============ BANNER ============ -->
     <section class="banner">
-      <img class="banner-img" src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=1800&q=70&fm=jpg&fit=crop" alt="Bageridisk fylld med nybakade bakverk" width="1800" height="900" loading="lazy" decoding="async">
+      <div class="banner-media" data-reveal="mask">
+        <img class="banner-img" src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=1800&q=70&fm=jpg&fit=crop" alt="Bageridisk fylld med nybakade bakverk" width="1800" height="900" loading="lazy" decoding="async">
+      </div>
       <div class="banner-overlay">
         <blockquote data-reveal>
           <p>”Doften när man kliver in klockan åtta en lördagsmorgon — det är den man kör till Brastad för.”</p>
@@ -226,13 +229,18 @@
     <!-- ============ OM OSS ============ -->
     <section class="about" id="om-oss">
       <div class="container about-grid">
-        <div class="about-media" data-reveal>
-          <img class="about-img-main" src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=900&q=70&fm=jpg&fit=crop" alt="Bagarens händer knådar en surdeg" width="900" height="600" loading="lazy" decoding="async">
-          <img class="about-img-small" src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=600&q=70&fm=jpg&fit=crop" alt="Butiken med hyllor fulla av nybakat bröd" width="600" height="450" loading="lazy" decoding="async">
+        <div class="about-media">
+          <div class="about-img-frame" data-reveal="mask">
+            <img class="about-img-main" src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=900&q=70&fm=jpg&fit=crop" alt="Bagarens händer knådar en surdeg" width="900" height="600" loading="lazy" decoding="async">
+          </div>
+          <div class="about-img-frame about-img-small-frame" data-reveal="mask" style="--d:140ms">
+            <img class="about-img-small" src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=600&q=70&fm=jpg&fit=crop" alt="Butiken med hyllor fulla av nybakat bröd" width="600" height="450" loading="lazy" decoding="async">
+          </div>
         </div>
         <div class="about-text">
+          <span class="section-index section-index-inline" aria-hidden="true">02</span>
           <p class="kicker" data-reveal>Om oss</p>
-          <h2 data-reveal>Ett hantverk i tredje generationen</h2>
+          <h2 class="split-reveal">Ett hantverk i tredje generationen</h2>
           <div data-reveal>
             <p>Brastad Bageri har legat på samma hörn sedan 1987, men recepten är äldre än så. Här bakar vi som farfar lärde oss: långsamt, för hand och alltid på riktiga råvaror.</p>
             <p>Surdegen som bär våra bröd är densamma som vid starten — den matas varje dag, året om. Mjölet mals på kvarnar här i Bohuslän, och det som säljs över disk på förmiddagen sattes på jäsning redan dagen innan.</p>
@@ -250,9 +258,10 @@
     <!-- ============ HITTA HIT ============ -->
     <section class="visit" id="hitta-hit">
       <div class="container">
-        <header class="section-head" data-reveal>
-          <p class="kicker">Välkommen in</p>
-          <h2>Öppettider &amp; hitta hit</h2>
+        <header class="section-head">
+          <span class="section-index" aria-hidden="true">03</span>
+          <p class="kicker" data-reveal>Välkommen in</p>
+          <h2 class="split-reveal">Öppettider &amp; hitta hit</h2>
         </header>
         <div class="visit-grid">
           <div class="visit-info" data-reveal>
@@ -284,6 +293,18 @@
     </section>
 
   </main>
+
+  <!-- Mobil: fast åtgärdsrad längst ner (eget mobilbeslut, ej på desktop) -->
+  <div class="mobile-bar" aria-hidden="false">
+    <a class="mobile-bar-btn mobile-bar-call" href="tel:+4652340022">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" fill="none" stroke-width="1.7"/></svg>
+      Ring bageriet
+    </a>
+    <a class="mobile-bar-btn mobile-bar-map" href="https://maps.google.com/?q=Bagarv%C3%A4gen+8,+454+31+Brastad" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21c-4.4-4-7-7-7-10.2C5 7 8.1 4 12 4s7 3 7 6.8C19 14 16.4 17 12 21Z" fill="none" stroke-width="1.7"/><circle cx="12" cy="10.5" r="2.2" fill="none" stroke-width="1.7"/></svg>
+      Hitta hit
+    </a>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-grid">
