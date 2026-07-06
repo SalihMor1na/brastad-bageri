@@ -504,10 +504,17 @@ a { color: var(--brown); }
   font-style: italic;
   white-space: nowrap;
 }
+/* Separator ritas med CSS (ingen emoji) så den ser likadan ut på iOS som på
+   desktop. Tidigare tecknet ✳ renderades som grön emoji på iPhone. */
 .marquee i {
-  font-style: normal;
-  font-size: 0.7rem;
-  opacity: 0.6;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  opacity: 0.55;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M12,2.5V21.5M2.5,12H21.5M5.5,5.5L18.5,18.5M18.5,5.5L5.5,18.5'%20fill='none'%20stroke='%23000'%20stroke-width='2.4'%20stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M12,2.5V21.5M2.5,12H21.5M5.5,5.5L18.5,18.5M18.5,5.5L5.5,18.5'%20fill='none'%20stroke='%23000'%20stroke-width='2.4'%20stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  vertical-align: middle;
 }
 @keyframes marquee {
   to { transform: translateX(-50%); }
